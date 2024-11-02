@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation of Nakhoda & inar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-cover bg-center h-screen bg-left md:bg-center bg-awal">
+    <!-- Background overlay -->
+    <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+        <div class="text-center text-white px-6 md:px-12">
+            <!-- Names -->
+            <img src="img/name-big.png" alt="" class="w-48 md:w-full">
+            <!-- Date -->
+            <p class="mt-2 text-lg md:text-xl">24.12.24</p>
+            <!-- Greeting -->
+            <p class="mt-4 text-sm md:text-base">Kepada Bapak/Ibu/Saudara/i</p>
+            <!-- Location -->
+            <p id="inviteeName" class="mt-2 text-base md:text-lg font-semibold"></p>
+            <!-- Button -->
+            <a href="/main.html"
+                class="mt-6 inline-block bg-white text-black rounded-full px-6 py-2 font-semibold hover:bg-gray-200 transition">
+                Buka Undangan
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Ambil nama undangan dari parameter 'to'
+        const inviteeName = getQueryParam('to');
+
+        // Jika ada nama undangan di URL, tampilkan di halaman
+        if (inviteeName) {
+            document.getElementById('inviteeName').textContent = decodeURIComponent(inviteeName).replace(/\+/g, ' ');
+        }
+    </script>
+</body>
+
+</html>
