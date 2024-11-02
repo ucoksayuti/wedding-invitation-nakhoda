@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaisei+Decol&display=swap');
 
+
 .gradient-overlay {
-    background: linear-gradient(to left, rgba(12, 28, 39, 0.9), rgba(12, 28, 39, 0));
+    background: linear-gradient(to top, rgba(12, 28, 39, 0.9), rgba(12, 28, 39, 0));
 }
 
 .font-kaisei {
@@ -14,14 +15,14 @@
     hyphens: auto;
 }
 
+/* Set the background to cover the entire screen */
 .bg-awal {
     background-image: url('img/IMG_0450.jpg');
 }
 
-  /* Ganti gambar latar untuk layar ukuran handphone */
 @media (max-width: 768px) {
     .bg-awal {
-    background-image: url('img/bggg-anjay-2.png');
+        background-image: url('img/phone-bg-awal.png');
     }
 }
 
