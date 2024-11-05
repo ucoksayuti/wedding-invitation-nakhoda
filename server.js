@@ -18,19 +18,18 @@ app.use(cors());
 
 
 
-// Get the last six comments
 app.get('/comments/all', async (req, res) => {
     try {
         const comments = await Comment.find({})
-            .sort({ createdAt: -1 }) // Sort by createdAt in descending order
-            .limit(6); // Limit to the last 6 comments
+            .sort({ createdAt: -1 }) 
+            .limit(6); 
         res.status(200).json(comments);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 });
 
-// Create new content
+
 app.post('/comment', async (req, res) => {
     try {
         const comment = await Comment.create(req.body);
@@ -42,7 +41,6 @@ app.post('/comment', async (req, res) => {
 
 
 
-// Connect to MongoDB and start the server
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         app.listen(port, () => {

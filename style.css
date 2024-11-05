@@ -15,7 +15,7 @@
     hyphens: auto;
 }
 
-/* Set the background to cover the entire screen */
+
 .bg-awal {
     background-image: url('img/IMG_0450.jpg');
 }
@@ -44,7 +44,7 @@
 }
 
 
-/* Keyframes untuk animasi slide */
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateY(-70%);
@@ -56,13 +56,12 @@
     }
 }
 
-/* Set opacity awal ke 0 agar elemen tidak terlihat sebelum animasi dimulai */
+
 .slide-in, .slide-in-2, .slide-in-3, .slide-in-4, .slide-in-5 {
     opacity: 0;
     animation: slideInFromLeft 0.8s ease-out forwards;
 }
 
-/* Animasi dengan delay berbeda untuk setiap elemen */
 .slide-in {
     animation-delay: 0.4s;
 }
