@@ -42,3 +42,43 @@
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
+
+
+/* Keyframes untuk animasi slide */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Set opacity awal ke 0 agar elemen tidak terlihat sebelum animasi dimulai */
+.slide-in, .slide-in-2, .slide-in-3, .slide-in-4, .slide-in-5 {
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+/* Animasi dengan delay berbeda untuk setiap elemen */
+.slide-in {
+    animation-delay: 0.4s;
+}
+
+.slide-in-2 {
+    animation-delay: 0.8s;
+}
+
+.slide-in-3 {
+    animation-delay: 1.2s;
+}
+
+.slide-in-4 {
+    animation-delay: 1.6s;
+}
+
+.slide-in-5 {
+    animation-delay: 2s;
+}
